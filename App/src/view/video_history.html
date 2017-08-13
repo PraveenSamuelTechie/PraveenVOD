@@ -1,0 +1,10 @@
+<div ng-controller="VideoHistoryController" id="video-history-section" style="display:none">    
+   <div class="page-header"><h2>Home > Recently Watched Videos</h2></div>
+       <div id="myHistoryCarousel" class="owl-carousel owl-theme" ng-init="init()">
+          <div class="items img-title" ng-repeat="videoHistory in videoHistoryList track by $index">
+              <span>{{videoHistory.timePeriod}}</span>
+               <img src="{{videoHistory.imgUrl}}" id="{{$index + 1}}" class="img-responsive center-block custom-img-size" />
+               <span>{{videoHistory.shortTitle}}</span>
+           </div>
+        </div>
+ </div>

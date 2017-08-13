@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />           
+	<script src="libraries/jquery/jquery-3.2.1.min.js"></script>  
+	<script src="libraries/bootstrap/js/bootstrap.min.js"></script>  
+	<script src="libraries/angularjs/angular.min.js"></script>
+	<script src="libraries/momentjs/moment.min.js"></script>
+
+	<script src="src/controller/application-controller.js"></script>
+    <script src="src/controller/index-controller.js"></script>
+	<script src="src/controller/video-catalogue-controller.js"></script>   
+	<script src="src/controller/video-player-controller.js"></script> 	   
+	<script src="src/controller/video-history-controller.js"></script>
+
+    <script src="libraries/OwlCarousel/dist/owl.carousel.min.js" defer></script>
+	
+	<script src="src/service/api-service.js"></script>        
+	<script src="src/service/storage-service.js"></script> 
+	
+	<script src="constants/configuration.js"></script>
+	
+	<script src="scripts/carousel.js"></script>	
+	
+
+	<link rel="stylesheet" type="text/css" href="libraries/bootstrap/css/bootstrap.min.css" />    
+	<link rel="stylesheet" type="text/css" href="libraries/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="libraries/OwlCarousel/dist/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="libraries/OwlCarousel/dist/assets/owl.theme.default.css" />
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />  
+	<link rel="stylesheet" type="text/css" href="css/carousel.css" />
+	<link rel="stylesheet" type="text/css" href="css/video-player.css" />
+</head>                                                                                 
+<body ng-app="VideoOnDemand">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span class="appTitle">Praveen's VOD</span></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="IndexController">
+				<ul class="nav navbar-nav">
+					<li><a href="#" ng-click="clickHome()"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;Home</a></li>                   
+				 
+				
+					<li><a href="#" ng-click="clickRefresh()"><span class="fa fa-refresh" aria-hidden="true"></span>&nbsp;Refresh</a></li>                          
+				   
+				</ul>
+				<ul id="historyLink" class="nav navbar-nav navbar-right">
+					<li><a href="#" ng-click="clickHistory()"><span class="fa fa-history" aria-hidden="true"></span>&nbsp;History</a></li>                         
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+    <div class="custom-wrapper">
+        <div id="content-area">
+        <div ng-include="'src/view/video_catalogue.html'"></div>
+        <div ng-include="'src/view/video_player_modal.html'"></div>
+        <div ng-include="'src/view/video_history.html'"></div>
+        </div>
+        <div style="display:none;" id="loader" class="loading"><img src="images/loading.gif"/></div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<div ng-controller="VideoCatalogueController" id="video-catalogue-section">
+    <div class="page-header"><h2>Home > Video Catalogue</h2></div>
+       <div id="myCarousel" class="owl-carousel owl-theme" ng-init="init()">
+           <div class="items img-title" ng-repeat="video in videoList">
+              <img src="{{video.imgUrl}}" id="{{$index + 1}}" class="img-responsive center-block custom-img-size" />
+              <span>{{video.shortTitle}}</span>
+            </div>
+     </div>
+ </div>
