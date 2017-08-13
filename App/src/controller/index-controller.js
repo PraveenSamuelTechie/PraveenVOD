@@ -11,6 +11,7 @@ application.controller('IndexController', ['$scope', function ($scope) {
         $('#video-catalogue-section').show(); 
     };
 
+    //Re-initialize page
     $scope.clickRefresh = function () {
         angular.element(('#video-history-section')).scope().init();
         angular.element(('#video-catalogue-section')).scope().init();
