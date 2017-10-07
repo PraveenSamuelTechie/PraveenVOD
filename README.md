@@ -60,7 +60,7 @@ Note: The above command reads the package.json folder and looks for the scripts 
 
 Possible Installation Failure Cases
 
-Note: I could test the application in 5 different operating systems operating on Windows. I do not have a Linux/ MacOS system. So, I couldn’t test it in Linux/MacOS environment.
+Note: This application works fine in Windows Operating System. This is not tested on Linux/MacOS operating systems.
 The installation steps could fail due to one of the reasons below,
 -	If there is a version conflict between the Node JS version running on the machine than what was mentioned on the package.json file.
 Note: In this case, go to command prompt and type the command node -v which will list the NodeJS version of your system.
