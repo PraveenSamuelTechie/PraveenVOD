@@ -80,13 +80,6 @@ List of implemented features
 -	Persistent storage of watched items was implemented using local device cache.
 -	Live app demo deployed to Heroku.
 
-List of features that I couldn’t implement (Time constraints)
-
--	Change carousel to Portrait view grid if application is run on a mobile device.
--	Image caching. Upon application restart or content refresh.
--	Error handling.
--	Unit tests.
-
 Known Issues
 
 -	Two browser console errors as exception handling is not implemented for the image retrieval functionality. Although it doesn’t affect the functionalities.
